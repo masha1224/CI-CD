@@ -19,12 +19,16 @@ jobs:
            
          - name: Install dependencies
            run: uv sync --group integration
+           working-directory: polish-sentiment-app
            
          - name: Run ruff check
            run: uv run ruff check
+           working-directory: polish-sentiment-app
            
          - name: Run pip-audit
            run: uv run pip-audit --vulnerability-service pypi
+           working-directory: polish-sentiment-app
 
          - name: Run PyTest
            run: uv run pytest tests
+           working-directory: polish-sentiment-app
