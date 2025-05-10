@@ -55,3 +55,8 @@ jobs:
         run: |
           cd polish-sentiment-app
           uv run python main.py --script export
+
+      - name: Build lightweight Docker image for inference
+        run: |
+          cd polish-sentiment-app
+          docker build -t polish-sentiment-app-onnx:latest .
