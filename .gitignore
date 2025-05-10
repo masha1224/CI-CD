@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+env/
+venv/
+ENV/
+.venv/
+pip-wheel-metadata/
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# GitHub Actions artifacts
+.github/workflows/*.log
+
+# Ignore Markdown and PNG files
+*.md
+*.png
