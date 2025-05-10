@@ -49,9 +49,9 @@ jobs:
       - name: Download model artifacts
         run: |
           cd polish-sentiment-app
-          uv run python src/scripts/main.py --script download
+          uv run python main.py --script download
 
       - name: Export model to ONNX
         run: |
           cd polish-sentiment-app
-          uv run python src/scripts/main.py --script export
+          uv run python main.py --script export
