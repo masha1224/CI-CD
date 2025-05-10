@@ -1,0 +1,13 @@
+name: Hello World workflow
+
+on:
+  # Umożliwia ręczne uruchomienie workflow z interfejsu GitHub
+  workflow_dispatch:
+
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest  # Obraz systemu, na którym workflow się wykona
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello world!"
