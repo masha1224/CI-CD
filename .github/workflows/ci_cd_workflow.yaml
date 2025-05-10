@@ -32,3 +32,28 @@ jobs:
          - name: Run PyTest
            run: uv run pytest tests
            working-directory: polish-sentiment-app
+
+deployment:
+    name: model-deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code repo
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install deployment dependencies
+        run: |
+          cd polish-sentiment-app
+          uv sync --group deployment
+
+      - name: Download model artifacts
+        run: |
+          cd polish-sentiment-app
+          uv run python src/scripts/main.py --script download
+
+      - name: Export model to ONNX
+        run: |
+          cd polish-sentiment-app
+          uv run python src/scripts/main.py --script export
