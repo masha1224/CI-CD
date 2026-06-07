@@ -24,6 +24,5 @@ pip-wheel-metadata/
 # GitHub Actions artifacts
 .github/workflows/*.log
 
-# Ignore Markdown and PNG files
-*.md
+# Ignore PNG files
 *.png

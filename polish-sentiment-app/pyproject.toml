@@ -1,7 +1,7 @@
 [project]
 name = "polish-sentiment-app"
 version = "0.1.0"
-description = "Add your description here"
+description = "FastAPI service for Polish text sentiment analysis using an ONNX-exported transformer model"
 readme = "README.md"
 requires-python = "==3.12.9"
 
